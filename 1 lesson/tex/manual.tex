@@ -1,0 +1,99 @@
+\usepackage{wasysym}
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 09/07/2024
+
+\input{preamble}
+
+% Document
+\begin{document}
+    \renewcommand{\arraystretch}{1.5}
+
+    \begin{minipage}[t]{0.2\textwidth}
+        \textbf{Аксиомы}
+        \centering
+        \begin{enumerate}
+            \item $\overline{\overline x} = x$
+            \item $x \vee \overline x = 1$
+            \item $x \vee 1 = 1$
+            \item $x \vee x = x$
+            \item $x \vee 0 = x$
+            \item $x \wedge \overline x = 0$
+            \item $x \wedge x = x$
+            \item $x \wedge 0 = 0$
+            \item $x \wedge 1 = x$
+        \end{enumerate}
+
+    \end{minipage}
+    \begin{minipage}[t]{0.4 \textwidth}
+        \centering
+        \textbf{Операции}
+        \begin{enumerate}
+            \item Дизъюнкция $\vee$\\0 1 1 1
+
+            \item Конъюнкция $\wedge$\\0 0 0 1
+
+            \item Исключающее <<или>> $\oplus$\\ 0 1 1 0\\
+            $x \oplus y = \overline x \wedge y \vee x \wedge \overline y$\\
+            $x \oplus y = (\overlint x \vee \overline y) \wedge (x \vee y)$\\
+            $x \oplus 1 = \overline x$\\
+            $x \oplus 0 = x$\\
+            $x \oplus x = 0$\\
+            $(x \oplus y) \oplus y = x$\\
+            $\overline x \oplus y = x \oplus \overline y$\\
+            $x \oplus y = z; x \oplus z = y$
+
+            \item Штрих Шеффера $|$\\ 1 1 1 0\\
+            $x \mid y = \overline{x \wedge y} = \overline x \vee \overline y$\\
+            $x \mid x = \overline x$\\
+
+            \item Стрелка Пирса $\downarrow$\\ 1 0 0 0\\
+            $x \downarrow y = \overline{x \vee y} = \overline x \wedge \overline y$\\
+            $x \downarrow x = \overline x$
+
+            \item Импликация $\rightarrow$\\ 1 1 0 1\\
+            $x \rightarrow y = \overline x \vee y$\\
+            $x \rightarrow 0 = \overline x$\\
+            $x \rightarrow x = 1$\\
+
+            \item Эквивалентность $\leftrightarrow$\\ 1 0 0 1\\
+            $x \leftrightarrow y = (x \rightarrow y) \wedge (y \rightarrow x)$\\
+            $x \leftrightarrow y = (x \wedge y) \vee (\overline x \wedge \overline y)$\\
+            $x \leftrightarrow y = (\overline x \vee y) \wedge (x \vee \overline y)$\\
+            $x \leftrightarrow x = 1$\\
+            $x \leftrightarrow 0 = \overline x$\\
+        \end{enumerate}
+
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \centering
+        \textbf{Свойства логических операций}
+        \begin{enumerate}
+            \item Коммутативность\\
+            $x \circ y = y \circ x,$\\
+            $\circ \in \{\wedge, \vee, \oplus, \downarrow, \leftrightarrow, | \}$
+
+            \item Идемпотентность\\
+            $x \circ x = x$\\
+            $\circ \in \{\vee, \wedge \}$
+
+            \item Ассоциативность\\
+            $(x \circ y) \circ z = x \circ (y \circ z),$\\
+            $\circ \in \{\vee, \wedge, \oplus, \leftrightarrow \}$\\
+
+            \item Дистрибутивность\\
+            $x \wedge (y \vee z) = (x \wedge y) \vee (x \wedge z)$\\
+            $x \vee (y \wedge z) = (x \vee y) \wedge (x \vee z)$\\
+            $x \wedge (y \oplus z) = (x \wedge y) \oplus (x \wedge z)$
+
+            \item Законы де Моргана\\
+            $\overline{x \wedge y} = \overline x \vee \overline y = x \mid y$\\
+            $\overline{x \vee y} = \overline x \wedge \overline y = x \downarrow y$
+
+            \item Законы поглощения\\
+            $x \wedge (x \vee y) = x$\\
+            $x \vee (x \wedge y) = x$
+
+        \end{enumerate}
+    \end{minipage}
+
+\end{document}
