@@ -1,15 +1,68 @@
-%! Author = zero
-%! Date = 30/07/2024
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 29/07/2024
 
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
+\input{preamble}
 
 % Document
 \begin{document}
+    \begin{center}
+        \textbf{Задачи №3 Логические аксиомы, свойства логических операций}\\
+    \end{center}
 
+    \begin{center}
+        Упростить выражение
+    \end{center}
 
+    \begin{enumerate}
+        \item $\overline{x \wedge \overline x}$
+        \item $x \leftrightarrow \overline x$
+        \item $x \leftrightarrow x \wedge (\overline x \rightarrow x \wedge x)$
+        \item $x \wedge (x \leftrightarrow \overline x)$
+        \item $\overline{x} \rightarrow (x \rightarrow y)$
+        \item $\overline{x \rightarrow (y \rightarrow x)}$
+        \item $y \rightarrow x \rightarrow (\overline x \rightarrow \overline y$)
+        \item $(x \rightarrow y) \wedge (y \rightarrow z) \rightarrow (x \rightarrow z)$
+        \item $\overline{x \rightarrow z \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z ))}$
+        \item $x \rightarrow(y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z))$
+        \item $\overline{\overline x \rightarrow (x \rightarrow y)}$
+        \item $x \vee \overline x \wedge y$
+        \item $x \rightarrow (x \rightarrow y)$
+        \item $(x \vee y) \wedge (x \vee \overline y)$
+        \item $(x \leftrightarrow y ) \wedge (x \vee y)$
+        \item $(\overline{x \vee y} \rightarrow x\vee y) \wedge y$
+        \item $(x \vee \overline y \rightarrow (z \rightarrow \overline y) \vee y \vee x)) \wedge x \rightarrow y$
+        \item $x \wedge y \rightarrow x$
+        \item $x \rightarrow (y \rightarrow x)$
+        \item $\overline y \rightarrow \overline x \rightarrow (x \rightarrow y)$
+        \item $(x \rightarrow y) \wedge (x \rightarrow \overline y) \rightarrow \overline x$
+        \item $x \rightarrow (y \rightarrow z) \rightarrow  (x \wedge y \rightarrow z)$
+        \item $x \wedge y \rightarrow z \rightarrow (x \rightarrow (y \rightarrow z))$
+        \item $(x \rightarrow y) \wedge (y \rightarrow z) \rightarrow (x \rightarrow z)$
+        \item $x \rightarrow z \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z))$
+        \item $x \rightarrow y \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z))$
+        \item $x \rightarrow (y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z))$
+        \item $x \vee \overline x \rightarrow y \wedge \overline y$
+        \item $x \wedge (x \rightarrow y) \wedge (x \rightarrow \overline y)$
+        \item $\overline{x \wedge \overline x \rightarrow y \rightarrow y} \rightarrow z \rightarrow w \wedge \overline w$
+        \item $\overline{x \rightarrow y \rightarrow (x \wedge z \rightarrow y \wedge z)}$
+        \item $x \wedge y \wedge z \wedge (x \vee y \vee z \rightarrow \overline w) \wedge w$
+    \end{enumerate}
+
+    \begin{center}
+        Доказать равносильность следующих формул
+    \end{center}
+
+    \begin{enumerate}
+        \item $\overline (x \rightarrow y)$ and $x \wedge \overline y$
+        \item $x \rightarrow \overline y$ and $y \rightarrow \overline x$
+        \item $x \leftrightarrow y$ and $\overline x \leftrightarrow \overline y$
+        \item $x \vee \overline x \wedge y$ and $x \vee y$
+        \item $(x \vee y) \wedge (x \vee \overline y)$ and $x$
+        \item $x \rightarrow (y \rightarrow z)$ and $x \wedge y \rightarrow z$
+        \item $x \wedge y \vee \overline x \wedge y \vee \overline x \wedge \overline y$ and $x \rightarrow y$
+        \item $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y)$ and $x \vee y$
+        \item $x \wedge (z \rightarrow y) \vee (x \rightarrow z) \wedge y$ and $(x \vee y) \wedge (y \vee \overline z)$
+        \item $x \wedge y \wedge z \vee x \wedge y \wedge \overline z \vee x \wedge \overline y \wedge z \vee x \wedge \overline y \wedge \overline z$ and $x$
+    \end{enumerate}
 
 \end{document}
