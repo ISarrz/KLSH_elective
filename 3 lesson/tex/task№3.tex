@@ -6,63 +6,117 @@
 % Document
 \begin{document}
     \begin{center}
-        \textbf{Задачи №3 Логические аксиомы, свойства логических операций}\\
+        \textbf{Задачи №3 Логические операции и их свойства}\\
     \end{center}
 
     \begin{center}
-        Упростить выражение
+        \textbf{№1 Выразить одним действием следующие выражения:}
     \end{center}
 
-    \begin{enumerate}
-        \item $\overline{x \wedge \overline x}$
-        \item $x \leftrightarrow \overline x$
-        \item $x \leftrightarrow x \wedge (\overline x \rightarrow x \wedge x)$
-        \item $x \wedge (x \leftrightarrow \overline x)$
-        \item $\overline{x} \rightarrow (x \rightarrow y)$
-        \item $\overline{x \rightarrow (y \rightarrow x)}$
-        \item $y \rightarrow x \rightarrow (\overline x \rightarrow \overline y$)
-        \item $(x \rightarrow y) \wedge (y \rightarrow z) \rightarrow (x \rightarrow z)$
-        \item $\overline{x \rightarrow z \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z ))}$
-        \item $x \rightarrow(y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z))$
-        \item $\overline{\overline x \rightarrow (x \rightarrow y)}$
-        \item $x \vee \overline x \wedge y$
-        \item $x \rightarrow (x \rightarrow y)$
-        \item $(x \vee y) \wedge (x \vee \overline y)$
-        \item $(x \leftrightarrow y ) \wedge (x \vee y)$
-        \item $(\overline{x \vee y} \rightarrow x\vee y) \wedge y$
-        \item $(x \vee \overline y \rightarrow (z \rightarrow \overline y) \vee y \vee x)) \wedge x \rightarrow y$
-        \item $x \wedge y \rightarrow x$
-        \item $x \rightarrow (y \rightarrow x)$
-        \item $\overline y \rightarrow \overline x \rightarrow (x \rightarrow y)$
-        \item $(x \rightarrow y) \wedge (x \rightarrow \overline y) \rightarrow \overline x$
-        \item $x \rightarrow (y \rightarrow z) \rightarrow  (x \wedge y \rightarrow z)$
-        \item $x \wedge y \rightarrow z \rightarrow (x \rightarrow (y \rightarrow z))$
-        \item $(x \rightarrow y) \wedge (y \rightarrow z) \rightarrow (x \rightarrow z)$
-        \item $x \rightarrow z \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z))$
-        \item $x \rightarrow y \rightarrow (y \rightarrow z \rightarrow (x \vee y \rightarrow z))$
-        \item $x \rightarrow (y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z))$
-        \item $x \vee \overline x \rightarrow y \wedge \overline y$
-        \item $x \wedge (x \rightarrow y) \wedge (x \rightarrow \overline y)$
-        \item $\overline{x \wedge \overline x \rightarrow y \rightarrow y} \rightarrow z \rightarrow w \wedge \overline w$
-        \item $\overline{x \rightarrow y \rightarrow (x \wedge z \rightarrow y \wedge z)}$
-        \item $x \wedge y \wedge z \wedge (x \vee y \vee z \rightarrow \overline w) \wedge w$
-    \end{enumerate}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \item $x \wedge y \vee \overline x \wedge \overline y$
+            \item $\overline x \vee y$
+            \item $\overline{x \wedge y}$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $\overline{x \vee y}$
+            \item $\overline x \wedge y \vee x \wedge \overline y$
+            \item $(x \rightarrow y) \wedge (y \rightarrow x)$
+        \end{enumerate}
+    \end{minipage}
+
 
     \begin{center}
-        Доказать равносильность следующих формул
+        \textbf{№2 Упростить следующие выражения:}
     \end{center}
 
-    \begin{enumerate}
-        \item $\overline (x \rightarrow y)$ and $x \wedge \overline y$
-        \item $x \rightarrow \overline y$ and $y \rightarrow \overline x$
-        \item $x \leftrightarrow y$ and $\overline x \leftrightarrow \overline y$
-        \item $x \vee \overline x \wedge y$ and $x \vee y$
-        \item $(x \vee y) \wedge (x \vee \overline y)$ and $x$
-        \item $x \rightarrow (y \rightarrow z)$ and $x \wedge y \rightarrow z$
-        \item $x \wedge y \vee \overline x \wedge y \vee \overline x \wedge \overline y$ and $x \rightarrow y$
-        \item $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y)$ and $x \vee y$
-        \item $x \wedge (z \rightarrow y) \vee (x \rightarrow z) \wedge y$ and $(x \vee y) \wedge (y \vee \overline z)$
-        \item $x \wedge y \wedge z \vee x \wedge y \wedge \overline z \vee x \wedge \overline y \wedge z \vee x \wedge \overline y \wedge \overline z$ and $x$
-    \end{enumerate}
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \begin{enumerate}
+            \item $(x \oplus y) \vee \overline{\overline x \wedge y}$
+            \item $(x \mid y) \wedge (x \wedge y)$
+            \item $(x \downarrow y) \wedge x$
+            \item $(x \mid y) \wedge \overline{(x \downarrow y)}$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \centering
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item $x \leftrightarrow y$
+            \item $x \oplus y \leftrightarrow \overline{x \oplus y}$
+            \item $(x \mid y) \vee (x \downarrow y)$
+            \item $((x \oplus y) \mid y) \leftrightarrow (x \downarrow y) $
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№3 Решите уравнение:}
+    \end{center}
+
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{enumerate}
+            \item $x \oplus y = 1$
+            \item $(x \mid y) \wedge x = 1$
+            \item $\overline x \wedge \overline y \vee y = 0$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $(x \mid y) \vee (x \oplus y) = 1$
+            \item $x \leftrightarrow y = 0$
+            \item $(x \mid y) \leftrightarrow (x \downarrow y) = 1$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№4 Определить какие выражения тождественно истинны, а какие тождественно ложны:}
+    \end{center}
+
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{enumerate}
+            \item $(x \leftrightarrow 0) \wedge x$
+            \item $\overline y \wedge \overline{(x \mid y)}$
+            \item $\overline{x \wedge y} \vee (x \leftrightarrow y)$
+            \item $\overline{(y \downarrow x)} \wedge \overline x \wedge \overline y$
+            \item $y \wedge (x \mid y) \wedge (x \downarrow y)$
+            \item $x \wedge (y \oplus x) \wedge (x \rightarrow y)$
+
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{6}
+            \item $x \oplus y \leftrightarrow y \oplus x$
+            \item $((y \mid x) \oplus y) \vee y$
+            \item $((x \oplus y) \downarrow x) \wedge y$
+            \item $\overline y \vee ((y \oplus x) \rightarrow y)$
+            \item $((y \downarrow x) \downarrow y) \wedge \overline x \wedge y$
+            \item $(x \mid y) \wedge \overline{(x \downarrow y)} \leftrightarrow \overline x \wedge y \vee x \wedge \overline y$
+        \end{enumerate}
+    \end{minipage}\
+
+    \begin{center}
+        \textbf{№5 Доказать равносильность следующих выражений:}
+    \end{center}
+
+    \begin{minipage}[t]{0.8\textwidth}
+        \begin{enumerate}
+            \item $(x \wedge y) \oplus x$ и $x\wedge \overline y$
+            \item $x \leftrightarrow y \rightarrow x$ и $x \wedge \oveline x \vee y$
+            \item $(y \downarrow x) \wedge (x \oplus y \vee \overline{x \wedge \overline y})$ и $\overline x \wedge \overline y$
+            \item $\overline{x \rightarrow y} \vee (x \mid y)$ и $\overline x \vee \overline y$
+            \item $((x \mid y) \mid x) \mid y$ и $\overline y$
+            \item $(x \leftrightarrow y) \wedge (x \rightarrow y) \wedge (y \leftrightarrow x)$ и $x \wedge y \vee \overline x \vee \overline y$
+            \item $(x \oplus y) \oplus (y \downarrow x)$ и $\overline x \vee \overline y$
+            \item $(x \oplus y) \rightarrow (x \mid y) \rightarrow (x \downarrow y) \rightarrow (x \leftrightarrow y) \rightarrow (x \rightarrow y)$ и $x \vee \overline x$
+        \end{enumerate}
+    \end{minipage}
+
 
 \end{document}

@@ -1,0 +1,46 @@
+%! Author = zero
+%! Date = 29/07/2024
+
+% Preamble
+\input{preamble}
+
+% Document
+\begin{document}
+    \begin{center}
+        \textbf{
+            Самостоятельная работа №4\\Логические операции и их свойства
+        }
+    \end{center}
+
+    \begin{center}
+        \textbf{№1 Выразить одним действием следующие выражения:}
+    \end{center}
+
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \item $x \wedge y \vee \overline x \wedge \overline y$
+            \item $\overline x \vee y$
+            \item $\overline{x \wedge y}$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $\overline{x \vee y}$
+            \item $\overline x \wedge y \vee x \wedge \overline y$
+            \item $(x \rightarrow y) \wedge (y \rightarrow x)$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№2 Упростить следующие выражения:}
+    \end{center}
+
+    \begin{enumerate}
+        \item $x \oplus (y \mid x)$
+        \item $(y \downarrow x) \vee (x \mid y)$
+        \item $(x \rightarrow y) \oplus (y \downarrow x)$
+        \item $(x \oplus y) \rightarrow (y \oplus (x \wedge y))$
+        \item $((y \oplus x) \mid y) \downarrow (x \wedge y)$
+    \end{enumerate}
+\end{document}

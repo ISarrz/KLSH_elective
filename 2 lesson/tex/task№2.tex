@@ -1,37 +1,125 @@
-%! Author = zero
+\usepackage{stmaryrd}%! Author = zero
 %! Date = 29/07/2024
 
 \input{preamble}
-
+% 25 min
 % Document
 \begin{document}
     \begin{center}
         \textbf{Задачи №2 Логические аксиомы, свойства логических операций}\\
-        Упростить выражение
     \end{center}
 
-    \begin{enumerate}
-        \item $\overline{(A \vee B)}$
-        \item $\overline{A \wedge B}$
-        \item $A \vee \overline{(\overline A \wedge B)})$
-        \item $\overline{(A \vee B \wedge \overline B \vee B)}$
-        \item $\overline{(A \wedge B) \vee A}$
-        \item $B \wedge A \overline{(A \wedge B)}$
-        \item $A \vee A \wedge B \wedge C \vee \overline B \wedge (C \vee \overline{(A \vee C)})$
-        \item $\overline{(\overline A \vee \overline B)} \wedge B \wedge A \vee A \wedge B$
-        \item $\overline{(C \vee \overline{(A \wedge B)} \wedge Z)} \wedge C \wedge Z \wedge 1$
-        \item $\overline{\overline{(A \vee B)}} \wedge \overline C \vee (A \wedge \overline C)$
-        \item $(x \vee y) \wedge (x \vee \overline y)$
-        \item $x \vee \overline x \wedge y$
-        \item $x \wedge y \vee \overline x \wedge y \vee \overline x \wedge \overline y$
-        \item $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y)$
-        \item $x \wedge y \wedge z \vee x \wedge y \wedge \overline z \vee x \wedge \overline y \wedge z \vee x \wedge \overline y \wedge \overline z$
-        \item $\overline{x \vee \overline x} \vee y \wedge \overline y$
-        \item $\overline z \vee (x \wedge z) \vee \overline{(x \vee z \vee \overline y)}$
-        \item $\overline{\overline x \vee z} \vee \overline{x \vee z}$
-        \item $\overline{\overline{\overline x \vee y} \vee \overline{\overline y \vee x}}$
-        \item $x \wedge (y \vee x) \vee \overline y \wedge x \vee \overline y \wedge y$
-    \end{enumerate}
+    \begin{center}
+        \textbf{№1 Упростить следующие формулы:}
+    \end{center}
 
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \begin{enumerate}
+            \item $\overline{x \vee y}$
+            \item $\overline{(x \wedge y) \vee x}$
+            \item $x \vee \overline x \wedge y$
+            \item $x \wedge y \vee \overline x \wedge y \vee \overline x \wedge \overline y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \centering
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item $\overline{x \wedge y}$
+            \item $x \vee \overline{(\overline x \wedge y)}$
+            \item $\overline{x \vee \overline x} \vee y \wedge \overline y$
+            \item $(x \vee y) \wedge (x \vee \overline y)$
+
+        \end{enumerate}
+    \end{minipage}
+
+
+    \begin{center}
+        \textbf{№2 Доказать равносильность следующих формул:}
+    \end{center}
+
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{enumerate}
+            \item $\overline {(x \rightarrow y)}$ и $x \wedge \overline y$
+            \item $x \rightarrow \overline y$ и $y \rightarrow \overline x$
+            \item $x \vee \overline x \wedge y$ и $x \vee y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $(x \vee y) \wedge (x \vee \overline y)$ и $x$
+            \item $x \rightarrow (y \rightarrow z)$ и $x \wedge y \rightarrow z$
+            \item $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y)$ и $x \vee y$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№3 Доказать тождественную истинность следующих формул:}
+    \end{center}
+
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{enumerate}
+            \item $x \wedge y \rightarrow x$
+            \item $x \rightarrow (y \rightarrow x) $
+            \item $\overline y \rightarrow \overline x \rightarrow (x \rightarrow y)$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.6\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $(x \rightarrow y) \wedge (x \rightarrow \overline y) \rightarrow \overline x$
+            \item $x \rightarrow (y \rightarrow z) \rightarrow (x \wedge y \rightarrow z)$
+            \item $x \rightarrow (y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z))$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№4 Доказать тождественную ложность следующих формул:}
+    \end{center}
+
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \item $x \vee \overline x \rightarrow y \wedge \overline y$
+            \item $x \wedge (x \rightarrow y) \wedge (x \rightarrow  \overline y)$
+            \item $\overline{x \wedge \overline x \rightarrow y } \rightarrow z \rightarrow w \wedge \overline w$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $\overline{x \rightarrow y \rightarrow (x \wedge z \rightarrow y \wedge z)}$
+            \item $x \wedge y \wedge z \wedge (x \vee y \vee z \rightarrow \overline w) \wedge w$
+            \item $\overline{(x \vee y) \wedge (z \vee x)} \wedge x$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№5 Найти $\textbf{z}$, если:}
+    \end{center}
+
+    \begin{minipage}[t]{0.9\textwidth}
+        \begin{enumerate}
+            \item $\overline{\overline x \vee z} \vee \overline{x \vee z} = y$
+            \item $x \wedge y \wedge (\overline x \vee \overline y) \vee z = y$
+            \item $z \wedge (x \wedge y \vee \overline{x \wedge y}) \vee \overline{(a \vee a)} \wedge (d \wedge q \wedge \overline{d \wedge q}) = zxc$
+            \item $(x \vee y \vee z) \wedge \overline{\overline{(\overline x \wedge \overline y \wedge \overline z)}} \vee z \wedge (x \wedge w \vee \overline x \vee \overline w) = \overline{x \wedge y} \vee \overline x \wedge x$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№6 Выразить через импликацию следующие формулы:}
+    \end{center}
+
+    \begin{minipage}[t]{0.9\textwidth}
+        \begin{enumerate}
+            \item $\overline x \vee y$
+            \item $\overline{\overline x \vee y} \vee x$
+            \item $\overline{(\overline x \vee y)} \vee (\overline y \vee x)$
+            \item $\overline{(\overline x \vee y)} \vee (\overline x \vee y)$
+            \item $\overline{\overline{(\overline x \vee y)} \vee (\overline y \vee x)} \vee x$
+        \end{enumerate}
+    \end{minipage}
 
 \end{document}

@@ -1,0 +1,51 @@
+%! Author = zero
+%! Date = 29/07/2024
+
+% Preamble
+\input{preamble}
+
+% Document
+\begin{document}
+    \begin{center}
+        \textbf{Самостоятельная работа №4\\КНФ, ДНФ, СКНФ, СДНФ}
+    \end{center}
+
+    \begin{center}
+        \textbf{Построить СКНФ, СДНФ и упростить их:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item СКНФ\\
+            $\bar x \vee y$\\
+            СДНФ\\
+            $\bar x \wedge \bar y \vee \bar x \wedge y \vee x \wedge y = $
+            $\bar x \wedge \bar y \vee y = $
+            $y \vee \bar x$
+
+            \item СКНФ\\
+            $(x \vee y) \wedge (x \vee \bar y) \wedge (\bar x \vee \bar y) = $
+            $(x \vee x \wedge \bar y \vee x \wedge y) \wedge (\bar x \vee y) = $
+            $x \wedge (\bar x \vee \bar y) = x \wedge \bar y$\\
+            СДНФ\\
+            $x \wedge \bar y$
+
+            \item СКНФ\\
+            $(x \vee y \vee \bar z) \wedge (x \vee \bar y \vee z) \wedge (\bar x \vee y \vee \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+            $(x \vee x \wedge \bar y \vee x \wedge z \vee x \wedge y \vee y \wedge z \vee x \wedge \bar z \vee \bar y \wedge \bar z) \wedge (\bar x \vee y \vee \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+            $(x \vee y \wedge z \vee \bar y \wedge \bar z) \wedge (\bar x \vee y \vee \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+            $(x \wedge y \vee x \wedge \bar z \vee \bar x \wedge y \wedge z \vee y \wedge z \vee \bar x \wedge \bar y \wedge \bar z \vee \bar y \wedge \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+            $(x \wedge y \vee x \wedge \bar z \vee y \wedge z \vee \bar y \wedge \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+            $x \wedge y \wedge \bar z \vee x \wedge \bar y \wedge \bar z \vee x \wedge \bar z \vee \bar x \wedge y \wedge z \vee \bar x \wedge \bar y \wedge \bar z \vee \bar y \wedge \bar z = $\\
+            $x \wedge \bar z \vee \bar x \wedge y \wedge z \vee \bar y \wedge \bar z$\\
+            СДНФ\\
+            $\bar x \wedge \bar y \wedge \bar z \vee \bar x \wedge y \wedge z \vee x \wedge \bar y \wedge \bar z \vee x \wedge y \wedge \bar z = $\\
+            $\bar x \wedge \bar y \wedge \bar z \vee x \wedge \bar y \wedge \bar z \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $\\
+            $\bar y \wedge \bar z \wedge (\bar x \vee x) \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $\\
+            $\bar y \wedge \bar z \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $\\
+            $\bar y \wedge \bar z \vee x \wedge y \wedge \bar z \vee \bar x \wedge y \wedge z = $\\
+            $\bar z \wedge (\bar y \vee x \wedge y) \vee \bar x \wedge y \wedge z = $\\
+            $\bar y \wedge \bar z \vee x \wedge \bar z \vee \bar x \wedge y \wedge z$
+        \end{spacing}
+    \end{enumerate}
+\end{document}

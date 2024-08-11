@@ -1,15 +1,385 @@
-%! Author = zero
-%! Date = 30/07/2024
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 29/07/2024
 
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
+\input{preamble}
 
 % Document
 \begin{document}
+    \begin{center}
+        \textbf{Задачи №3 Логические операции и их свойства}\\
+    \end{center}
+
+    \begin{center}
+        \textbf{№1 Выразить одним действием следующие формулы:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $x \wedge y \vee \overline x \wedge \overline y = x \leftrightarrow y$
+
+            \item $\overline x \vee y = x \rightarrow y$
+
+            \item $\overline{x \wedge y} = x \mid y$
+
+            \item $\overline{x \vee y} = x \downarrow y$
+
+            \item $\overline x \wedge y \vee x \wedge \overline y = x \oplus y$
+
+            \item $(x \rightarrow y) \wedge (y \rightarrow x) = x \leftrightarrow y$
+        \end{spacing}
+    \end{enumerate}
 
 
+    \begin{center}
+        \textbf{№2 Упростить следующие формулы:}
+    \end{center}
 
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $(x \oplus y) \vee \overline{(\overline x \wedge y)} = $
+            $\overline x \wedge y \vee x \wedge \overline y \vee \overline{\overline x \wedge y} = 1$
+
+            \item $(x \mid y) \wedge (x \wedge y) = \overline{x \wedge y} \wedge (x \wedge y) = 0$
+
+            \item $(x \downarrow y) \wedge x = (\overline x \wedge \overline y) \wedge x = 0$
+
+            \item $(x \mid y) \wedge \overline{(x \downarrow y)} = $
+            $\overline{x \wedge y} \wedge \overline{\overline{x \vee y}} = $
+            $(\overline x \vee \overline y) \wedge (x \vee y) = $\\
+            $\overline x \wedge x \vee \overline x \wedge y \vee \overline y \wedge x \vee \overline y \wedge y = $
+            $\overline x \wedge y \vee x \wedge \overline y$
+
+            \item $x \leftrightarrow y = x \wedge y \vee \overline x \wedge \overline y$
+
+            \item $x \oplus y \leftrightarrow \overline{x \oplus y} = 0$
+
+            \item $(x \mid y) \vee (x \downarrow y) = $
+            $\overline x \vee \overline y \vee \overline x \wedge \overline y = $
+            $\overline x \vee \overline y$
+
+            \item $((x \oplus y) \mid y) \leftrightarrow (x \downarrow y) = $
+            $((\overline x \wedge y \vee x \wedge \overline y) \mid y) \leftrightarrow \overline x \wedge \overline y = $\\
+            $\overline{\overline x \wedge y \vee x \wedge \overline y} \vee \overline y \leftrightarrow \overline x \wedge \overline y = $\\
+            $(x \vee \overline y) \wedge (\overline x \vee y) \vee \overline y \leftrightarrow\overline x \wedge \overline y = $\\
+            $x \wedge \overline x \vee x \wedge y \vee \overline y \wedge \overline x \vee \overline y \wedge y \vee \overline y \leftrightarrow \overline x \wedge \overline y = $\\
+            $x \wedge y \vee \overline x \wedge \overline y \vee \overline y \leftrightarrow \overline x \wedge \overline y = $\\
+            $\overline y \vee x \wedge y \leftrightarrow \overline x \wedge \overline y = $\\
+            $(\overline y \vee y) \wedge (\overline y \vee x) \leftrightarrow \overline x \wedge \overline y = $\\
+            $\overline y \vee x \leftrightarrow \overline x \wedge \overline y = $
+            $(\overline y \vee x) \wedge (\overline x \wedge \overline y) \vee (y \wedge \overline x) \wedge (x \vee y) = $\\
+            $\overline x \wedge \overline y \vee \overline y \wedge \ovelrine y \vee x \wedge \overline x \vee x \wedge \overline y \vee y \wedge x \vee y \wedge y \vee \overline x \wedge x \vee \overline x \wedge y = $\\
+            $\overline x \wedge \overline y \vee x \wedge \overline y \vee x \wedge y \vee y \vee \overline x \wedge y = $\\
+            $\overline y \wedge (\overline x \vee x) \vee y = $
+            $\overline y \vee y = 1$
+        \end{spacing}
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№3 Решите уравнение:}
+    \end{center}
+
+    \begin{spacing}{1.5}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{enumerate}
+                \item $x \oplus y = 1$\\
+                \begin{spacing}{4.5}\end{spacing}
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 0   \\
+                        \hline
+                        0   & 1   & 1   \\
+                        \hline
+                        1   & 0   & 1   \\
+                        \hline
+                        1   & 1   & 0   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: \\(0; 1),\\ (1; 0)
+            \end{enumerate}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{enumerate}
+                \setcounter{enumi}{1}
+                \item $(x \mid y) \wedge x = 1$\\
+                $(\overline x \vee \overline y) \wedge x = 1$\\
+                $x \wedge \overline y = 1$\\
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 0   \\
+                        \hline
+                        0   & 1   & 0   \\
+                        \hline
+                        1   & 0   & 1   \\
+                        \hline
+                        1   & 1   & 0   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: (1; 0)
+            \end{enumerate}
+        \end{minipage}
+        \begin{minipage}[t]{0.3\textwidth}
+            \begin{enumerate}
+                \setcounter{enumi}{2}
+                \item $\overline x \wedge \overline y \vee y = 0$\\
+                $(y \vee \overline y) \wedge (y \vee \overline x) = 0$\\
+                $y \vee \overline x = 0$\\
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 1   \\
+                        \hline
+                        0   & 1   & 1   \\
+                        \hline
+                        1   & 0   & 0   \\
+                        \hline
+                        1   & 1   & 1   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: (1; 0)
+            \end{enumerate}
+        \end{minipage}
+
+        \begin{center}\end{center}
+
+        \begin{minipage}[t]{0.35\textwidth}
+            \begin{enumerate}
+                \setcounter{enumi}{3}
+                \item $(x \mid y) \vee (x \oplus y) = 1$\\
+                $\overline x \vee \overline y \vee \overline x \wedge y \vee x \wedge \overline y = 1$\\
+                $\overline x \vee x \wedge \overline y = 1$\\
+                $(\overline x \vee x) \wedge (\overline x \vee \overline y) = 1$\\
+                $\overline x \vee \overline y = 1$
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 1   \\
+                        \hline
+                        0   & 1   & 1   \\
+                        \hline
+                        1   & 0   & 1   \\
+                        \hline
+                        1   & 1   & 0   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: \\(0; 0), (0; 1), \\(1; 0)
+            \end{enumerate}
+        \end{minipage}
+        \begin{minipage}[t]{0.2\textwidth}
+            \begin{enumerate}
+                \setcounter{enumi}{4}
+                \item $x \leftrightarrow y = 0$\\
+                \begin{spacing}{6.2}\end{spacing}
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 1   \\
+                        \hline
+                        0   & 1   & 0   \\
+                        \hline
+                        1   & 0   & 0   \\
+                        \hline
+                        1   & 1   & 1   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: \\(0; 1), \\(1; 0)
+            \end{enumerate}
+        \end{minipage}
+        \begin{minipage}[t]{0.5\textwidth}
+            \begin{enumerate}
+                \setcounter{enumi}{5}
+                \item $(x \mid y) \leftrightarrow (x \downarrow y) = 1$\\
+                $(x \mid y) \wedge (x \downarrow y) \vee \overline{(x \mid y)} \vee \overline{(x \downarrow y)} = 1$\\
+                $(\overline x \vee \overline y) \vee (\overline x \wedge \overline y) \vee (x \wedge y) \vee (x \vee y) = 1$\\
+                $\overline x \wedge \overline y \vee x \wedge y = 1$\\
+                $x \leftrightarrow y = 1$
+                \begin{spacing}{1}
+                    \begin{tabular}{|c|c|c|}
+                        \hline
+                        $x$ & $y$ & $f$ \\
+                        \hline
+                        0   & 0   & 1   \\
+                        \hline
+                        0   & 1   & 0   \\
+                        \hline
+                        1   & 0   & 0   \\
+                        \hline
+                        1   & 1   & 1   \\
+                        \hline
+                    \end{tabular}\\
+                \end{spacing}
+                Ответ: (0; 0) (1; 1)
+            \end{enumerate}
+        \end{minipage}
+
+
+    \end{spacing}
+
+
+    \begin{center}
+        \textbf{№4 Определить какие выражения тождественно истинны, а какие тождественно ложны:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $(x \leftrightarrow 0) \wedge x = $
+            $(x \wedge 0 \vee \overline x \wedge \overline 0) \wedge x = $
+            $\overline x \wedge x = 0$
+
+            \item $\overline y \wedge \overline{(x \mid y)} = $
+            $\overline y \wedge (x \wedge y) = 0$
+
+            \item $\overline{x \wedge y} \vee (x \leftrightarrow y) = $
+            $\overline{x \wedge y} \vee x \wedge y \vee \overline x \wedge \overline y = $
+            $\overline x \vee \overline y \vee x \wedge y \vee \overline x \wedge \overline y = $
+            $\overline x \vee \overline y \vee x \wedge y = $
+            $(\overline x \vee x) \wedge (\overline x \vee y) \vee \overline y = $
+            $\overline x \vee y \vee \overline y = 1$
+
+            \item $\overline{y \downarrow x} \wedge \overline x \wedge \overline y = $
+            $(y \vee x) \wedge \overline x \wedge \overline y = 0$
+
+            \item $y \wedge (x \mid y) \wedge (x \downarrow y) = $
+            $y \wedge (\overline x \vee \overline y) \wedge (\overline x \wedge \overline y) = $
+            $y \wedge \overline x \wedge \overline y = 0$
+
+            \item $x \wedge (y \oplus x) \wedge (x \rightarrow y) = $
+            $x \wedge (\overline y \wedge x \vee y \wedge \overline x) \wedge (\overline x \vee y) = $
+            $x \wedge \overline y \wedge (\overline x \vee y) = 0$
+
+            \item $x \oplus y \leftrightarrow y \oplus x = $
+            $\overline x \wedge y \vee x \wedge \overline y \leftrightarrow \overline y \wedge x \vee y \wedge \overline x) = 1$
+
+            \item $((y \mid x) \oplus y) \vee y = $
+            $((\overline y \vee \overline x) \oplus y) \vee y = $
+            $\overline{\overline y \vee \overline x} \wedge y \vee (\overline y \vee \overline x) \wedge \overline y \vee y = $
+            $y \wedge x \vee \overline y \vee \overline x \wedge \overline y \vee y = 1$
+
+            \item $((x \oplus y) \downarrow x) \wedge y = $
+            $((\overline x \wedge y \vee x \wedge \overline y) \downarrow x) \wedge y = $
+            $\overline{\overline x \wedge y \vee x \wedge \overline y} \wedge \overline x \wedge y = $
+            $(x \vee \overline y) \wedge (\overline x \vee y) \wedge x \wedge y = $
+            $(x \wedge \overline x \vee x \wedge y \vee \overline x \wedge \overline y \vee y \wedge \overline y) \wedge \overline x \wedge y = $
+            $(x \wedge y \vee \overline x \wedge \overline y) \wedge \overline x \wedge y = 0$
+
+            \item $\overline y \vee ((y \oplus x) \rightarrow y) = $
+            $\overline y \vee (\overline{\overline y \wedge x \vee y \wedge \overline x} \vee y) = $
+            $\overline y \vee y \vee \overline{\overline y \wedge x \vee y \wedge \overline x} = 1$
+
+            \item $((y \downarrow x) \downarrow y) \wedge \overline x \wedge y = $
+            $(\overline y \wedge \overline x \downarrow y) \wedge \overline x \wedge y = $
+            $(x \vee y) \wedge \overline y \wedge \overline x \wedge y = 0$
+
+            \item $(x \mid y) \wedge \overline{(x \downarrow y)} \leftrightarrow \overline x \wedge y \vee x \wedge \overline y = $
+            $(\overline x \vee \overline y) \wedge (x \vee y) \leftrightarrow \overline x \wedge y \vee x \wedge \overline y = $
+            $\overline x \wedge x \vee \overline x \wedge y \vee x \wedge \overline y \vee y \wedge \overline y \leftrightarrow \overline x \wedge y \vee x \wedge \overline y = $
+            $\overline x \wedge y \vee x \wedge \overline y \leftrightarrow \overline x \wedge y \vee x \wedge \overline y = 1$
+
+        \end{spacing}
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№5 Доказать равносильность следующих формул:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $(x \wedge y) \oplus x$ и $x \wedge \overline y$\\
+            Преобразуем левую часть:\\
+            $(x \wedge y) \oplus x = $
+            $\overline{x \wedge y} \wedge x \vee x \wedge y \wedge \overline x = $
+            $(\overline x \vee \overline y) \wedge x = $
+            $x \wedge \overline y$\\
+            $x \wedge \overline y = x \wedge \overline y$ - ч. т. д.
+
+            \item $x \leftrightarrow y \rightarrow x$ и $x \wedge x \vee y$\\
+            Преобразуем левую часть:\\
+            $x \leftrightarrow y \rightarrow x = $
+            $x \leftrightarrow \overline y \vee x = $
+            $x \wedge (\overline y \vee x) \vee \overline x \wedge \overline{(\overline y \vee x)} = $\\
+            $x \vee x \wedge \overline y \vee \overline x \wedge ( y \wedge \overline x) = $
+            $x \vee x \wedge \overline y \vee \overline x \wedge y = x \vee y$\\
+            Преобразуем правую часть:\\
+            $x \wedge x \vee y = x \vee y$\\
+            $x \vee y = x \vee y$ - ч. т. д.
+
+            \item $(y \downarrow x) \wedge (x \oplus y \vee \overline{x \wedge \overline y})$ и $\overline x \wedge \overline y$\\
+            Преобразуем левую часть:\\
+            $(y \downarrow x) \wedge (x \oplus y \vee \overline{x \wedge \overline y}) = $
+            $\overline x \wedge \overline y \wedge (\overline x \wedge y \vee x \wedge \overline y \vee \overline{x \wedge \overline y}) = $
+            $\overline x \wedge \overline y$\\
+            $\overline x \wedge \overline y = \overline x \wedge \overline y$ - ч. т. д.
+
+            \item $\overline{x \rightarrow y} \vee (x \mid y)$ и $\overline x \vee \overline y$\\
+            Преобразуем левую часть:\\
+            $\overline{x \rightarrow y} \vee (x \mid y) = $
+            $\overline{\overline x \vee y} \vee \overline x \vee \overline y = $
+            $x \wedge \overline y \vee \overline x \vee \overline y = \overline x \vee \overline y$\\
+            $\overline x \vee \overline y = \overline x \vee \overline y$ - ч. т. д.
+
+            \item $((x \mid y) \mid x) \mid y$ и $\overline y$\\
+            Преобразуем левую часть:\\
+            $((x \mid y) \mid x) \mid y = $
+            $\overline{\overline{\overline x \vee \overilne y} \vee \overline x} \vee \overline y = $
+            $\overline{x \wedge y \vee \overline x} \vee \overline y = $
+            $\overline{(\overline x \vee x) \wedge (\overline x \vee y)} \vee \overline y = $
+            $\overline{\overline x \vee y} \vee \overline y = $
+            $x \wedge \overline y \vee \overline y = \overline y$\\
+            $\overline y = \overline y$ - ч. т. д.
+
+            \item $(x \leftrightarrow y) \wedge (x \rightarrow y) \wedge (y \leftrightarrow x)$ и $x \wedge y \vee \overline x \vee \overline y$\\
+            Преобразуем левую часть:\\
+            $(x \leftrightarrow y) \wedge (x \rightarrow y) \wedge (y \leftrightarrow x) = $\\
+            $(x \rightarrow y) \wedge (y \rightarrow x) \wedge (x \rightarrow y) \wedge (y \rightarrow x) \wedge (x \rightarrow y) = $
+            $(x \rightarrow y) \wedge (y \rightarrow x) = (\overline x \vee y) \wedge (\overline y \vee x) = $
+            $x \wedge y \vee \overline x \wedge \overline y$\\
+            $x \wedge y \vee \overline x \vee \overline y = x \wedge y \vee \overline x \vee \overline y$ - ч. т. д.
+
+            \item $(x \oplus y) \oplus (y \downarrow x)$ и $\overline x \vee \overline y$\\
+            Преобразуем левую часть:\\
+            $(x \oplus y) \oplus (y \downarrow x) = $
+            $(\overline x \wedge y \vee x \wedge \overline y) \oplus (\overline x \wedge \overline y) = $\\
+            $\overline{\overline x \wedge y \vee x \wedge \overline y} \wedge \overline x \wedge \overline y \vee (\overline x \wedge y \vee x \wedge \overline y) \wedge \overline{(\overline x \wedge \overline y)} = $\\
+            $(x \vee \overline y) \wedge (\overline x \vee y) \wedge \overline x \wedge \overline y \vee (\overline x \wedge y \vee x \wedge \overline y) \wedge (x \vee y) = $\\
+            $(\overline x \wedge \overline y \vee x \wedge y) \wedge \overline x \wedge \overline y \vee (0 \vee 0) = $
+            $\overline x \wedge \overline y$\\
+            $\overline x \wedge \overline y = \overline x \wedge \overline y$ - ч. т. д.
+
+            \item $(x \oplus y) \rightarrow (x \mid y) \rightarrow (x \downarrow y) \rightarrow (x \leftrightarrow y) \rightarrow (x \rightarrow y)$ и $x \vee \overline x$\\
+            Преобразуем левую часть:\\
+            $(x \oplus y) \rightarrow (x \mid y) \rightarrow (x \downarrow y) \rightarrow (x \leftrightarrow y) \rightarrow (x \rightarrow y) = $\\
+            $\overline{x \oplus y} \vee (x \mid y) \rightarrow (x \downarrow y) \rightarrow (x \leftrightarrow y) \rightarrow (x \rightarrow y) = $\\
+            $\overline{\overline{x \oplus y} \vee (x \mid y)} \vee (x \downarrow y) \rightarrow (x \leftrightarrow y) \rightarrow (x \rightarrow y) = $\\
+            $\overline{\overline{\overline{x \oplus y} \vee (x \mid y)} \vee (x \downarrow y)} \vee (x \leftrightarrow y) \rightarrow (x \rightarrow y) = $\\
+            $\overline{\overline{\overline{\overline{x \oplus y} \vee (x \mid y)} \vee (x \downarrow y)} \vee (x \leftrightarrow y)} \vee (x \rightarrow y) = $\\
+            $(x \oplus y) \wedge \overline{(x \mid y)} \vee (x \downarrow y) \wedge \overline{x \leftrightarrow y} \vee (x \rightarrow y) = $\\
+            $(\overline x \wedge y \vee x \wedge \overline y) \wedge x \wedge y \vee (\overline x \vee \overline y) \wedge \overline{(x \wedge y \vee \overline x \wedge \overline y)} \vee \overline x \vee y = $\\
+            $(\overline x \vee \overline y) \wedge (\overline x \vee \overline y) \wedge (x \vee y) \vee \overline x \vee y = $\\
+            $\overline x \wedge y \vee x \wedge \overline y \vee \overline x \vee y = $
+            $\overline x \vee x \wedge \overline y \vee y = $
+            $(\overline x \vee x) \wedge (\overline x \vee \overline y) \vee y = $
+            $\overline x \vee \overline y \vee y = 1$\\
+            Преобразуем правую часть:\\
+            $x \vee \overline x = 1$\\
+            $1 = 1$ - ч. т. д.
+
+
+        \end{spacing}
+    \end{enumerate}
 \end{document}

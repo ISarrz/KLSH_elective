@@ -1,0 +1,76 @@
+%! Author = zero
+%! Date = 29/07/2024
+
+% Preamble
+\input{preamble}
+
+% Document
+\begin{document}
+    \begin{center}
+        \textbf{
+            Самостоятельная работа №4\\Логические операции и их свойства
+        }
+    \end{center}
+
+    \begin{center}
+        \textbf{№1 Выразить одним действием следующие выражения:}
+    \end{center}
+
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \item $x \leftrightarrow y$
+            \item $x \rightarrow y$
+            \item $x \mid y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item $x \downarrow y$
+            \item $x \oplus y$
+            \item $x \leftrightarrow y$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№2 Упростить следующие выражения:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.2}
+            \item $x \oplus (y \mid x) = $
+            $x \oplus (\bar y \vee \bar x) = $
+            $\bar x \wedge (\bar x \vee \bar y) \vee x \wedge (x \wedge y) = $
+            $\bar x \wedge \bar y \vee \bar x \vee x \wedge y = $
+            $\bar x \vee x \wedge y = $
+            $\bar x \vee y$
+
+            \item $(y \downarrow x) \vee (x \mid y) = $
+            $\bar y \wedge \bar x \vee \bar x \vee \bar y = \bar x \vee \bar y$
+
+            \item $(x \rightarrow y) \oplus (y \downarrow x) = $
+            $\overline{(\bar x \vee y)} \wedge \bar y \wedge \bar x \vee (\bar x \vee y) \wedge (x \vee y) = $\\
+            $x \wedge \bar y \wedge \bar y \wedge \bar x \vee \bar x \wedge y \vee x \wedge y \vee y = $
+            $y$
+
+            \item $x \oplus y \rightarrow y \oplus (x \wedge y) = $
+            $\overline{(\bar x \wedge y \vee x \wedge \bar y)} \vee \bar y \wedge x \wedge y \vee y \wedge \overline{(x \wedge y)} = $\\
+            $(x \vee \bar y) \wedge (\bar x \vee y) \vee y \wedge (\bar x \vee \bar y) = $
+            $x \wedge y \vee \bar x \wedge \bar y \vee \bar x \wedge y = $\\
+            $x \wedge y \vee \bar x \wedge y \vee \bar x \wedge \bar y = $
+            $y \wedge (x \vee \bar x) \vee \bar x \wedge \bar y = $
+            $y \vee \bar x \wedge \bar y = $
+            $y \vee \bar x$
+
+            \item $((y \oplus x) \mid y) \downarrow x \wedge y = $
+            $(\overline{\bar x \wedge y \vee x \wedge \bar y} \vee \bar y) \downarrow (x \wedge y) = $\\
+            $((x \vee \bar y) \wedge (\bar x \vee y) \vee \bar y) \downarrow (x \wedge y) = $
+            $(x \wedge y \vee \bar x \wedge \bar y \vee \bar y) \downarrow (x \wedge y) = $\\
+            $(\bar y \vee x \wedge y) \downarrow (x \wedge y) = $
+            $(\bar y \vee x) \downarrow (x \wedge y) = $\\
+            $\overline{(\bar y \vee x)} \wedge \overline{(x \wedge y)} = $
+            $y \wedge \bar x \wedge (\bar x \vee y) = $
+            $\bar x \wedge y$
+        \end{spacing}
+    \end{enumerate}
+\end{document}

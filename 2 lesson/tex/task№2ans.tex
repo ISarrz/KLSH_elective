@@ -1,15 +1,194 @@
-%! Author = zero
-%! Date = 30/07/2024
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 29/07/2024
 
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
-
+\input{preamble}
+% 25 min
 % Document
 \begin{document}
+    \begin{center}
+        \textbf{Задачи №2 Логические аксиомы, свойства логических операций}\\
+    \end{center}
 
+    \begin{center}
+        \textbf{№1 Упростить следующие формулы:}
+    \end{center}
+
+
+    \begin{enumerate}
+        \item $\overline{x \vee y} = \overline x \wedge \overline y$
+
+        \item $\overline{(x \wedge y) \vee x} = \overline{x \wedge y} \wedge \overline x = $
+        $(\overline x \vee \overline y) \wedge \overline x = \overline x \vee \overline x \wedge \overline y = \overline x$
+
+        \item $x \vee \overline x \wedge y = (x \vee \overline x) \wedge (x \vee y) = $
+        $x \vee y$
+
+        \item $x \wedge y \vee \overline x \wedge y \vee \overline x \wedge \overline y = $
+        $x \wedge y \vee \overline x = \overline x \vee y$
+
+        \item $\overline{x \wedge y} = \overline x \vee \overline y$
+
+        \item $x \vee \overline{(\overline x \wedge y)} = x \vee x \vee \overline y = x \vee \overline y$
+
+        \item $\overline{x \vee \overline x} \vee y \wedge \overline y = 0 \vee 0 = 0$
+
+        \item $(x \vee y) \wedge (x \vee \overline y) =x \vee x \wedge \overline y \vee x \wedge y \vee y \wedge \overline y = $
+        $x \vee x \wedge y = x$
+    \end{enumerate}
+
+
+
+    \begin{center}
+        \textbf{№2 Доказать равносильность следующих формул:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $\overline{(x \rightarrow y)}$ и $x \wedge \overline y$\\
+            Преобразуем левую часть:\\
+            $\overline{(x \rightarrow y)} = \overline{\overline x \vee y} = x \wedge \overline y$\\
+            $x \wedge \overline y = x \wedge \overline y$ - ч. т. д.
+
+            \item $x \rightarrow \overline y$ и $y \rightarrow \overline x$\\
+            Преобразуем левую часть:\\
+            $x \rightarrow \overline y = \overline x \vee \overline y$\\
+            Преобразуем правую часть:\\
+            $y \rightarrow \overline x = \overline y \vee \overline x = \overline x \vee \overline y$\\
+            $\overline x \vee \overline y = \overline x \vee \overline y$ - ч. т. д.
+
+            \item $x \vee \overline x \wedge y$ и $x \vee y$\\
+            Преобразуем левую часть:\\
+            $x \vee \overline x \wedge y = (x \vee \overline x) \wedge (x \vee y) = x \vee y$ \\
+            $x \vee y = x \vee y$ - ч. т. д.
+
+            \item $(x \vee y) \wedge (x \vee \overline y)$ и $x$\\
+            Преобразуем левую часть:\\
+            $(x \vee y) \wedge (x \vee \overline y) = x \vee \overline y \wedge x \vee x \wedge y \vee y \wedge \overline y = x$\\
+            $x = x$ - ч. т. д.
+
+            \item $x \rightarrow (y \rightarrow z)$ и $x \wedge y \rightarrow z$\\
+            Преобразуем левую часть:\\
+            $x \rightarrow (y \rightarrow z) = \overline x \vee \overline y \vee z$\\
+            Преобразуем правую часть:\\
+            $x \wedge y \rightarrow z = \overline x \vee \overline y \vee z$\\
+            $\overline x \vee \overline y \vee z = \overline x \vee \overline y \vee z$ - ч. т. д.
+
+            \item $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y)$ и $x \vee y$\\
+            Преобразуем левую часть:\\
+            $x \wedge y \vee (x \vee y) \wedge (\overline x \vee \overline y) = $\\
+            $x \wedge y \vee (x \wedge \overline x \vee x \wedge \overline y \vee \overline x \wedge y \vee y \wedge \overline y) = $\\
+            $x \wedge y \vee x \wedge \overline y \vee \overline x \wedge y = x \vee \overline x \wedge y = $\\
+            $(x \vee \overline x) \wedge (x \vee y) = x \vee y$\\
+            $x \vee y = x \vee y$ - ч. т. д.
+        \end{spacing}
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№3 Доказать тождественную истинность следующих формул:}
+    \end{center}
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $x \wedge y \rightarrow x = \overline x \vee \overline y \vee x = 1$ - ч. т. д.
+
+            \item $x \rightarrow (y \rightarrow x) = \overline x \vee \overline y \vee x = 1$ - ч. т. д.
+
+            \item $\overline y \rightarrow \overline x \rightarrow (x \rightarrow y) = $
+            $y \vee \overline x \rightarrow \overline x\vee y = 1$ - ч. т. д.
+
+            \item $(x \rightarrow y) \wedge (x \rightarrow \overline y) \rightarrow \overline x = $
+            $(\overline x \vee y) \wedge (\overline x \vee \overline y) \rightarrow \overline x = $\\
+            $\overline x \vee \overline x \wedge \overline y \vee y \wedge \overline x \vee y \wedge \overline y \rightarrow \overline x =$
+            $\overline x \rightarrow \overline x = 1$ - ч. т. д.
+
+            \item $x \rightarrow (y \rightarrow z) \rightarrow (x \wedge y \rightarrow z) = $
+            $\overline x \vee \overline y \vee z \rightarrow \overline x \vee \overline y \vee z = 1$ - ч. т. д.
+
+            \item $x \rightarrow (y \rightarrow z) \rightarrow (x \rightarrow y \rightarrow (x \rightarrow z)) = $
+            $\overline x \vee \overline y \vee z \rightarrow (\overline x \vee y \rightarrow \overline x \vee z) = $
+            $\overline x \vee \overline y \vee z \rightarrow (x \wedge \overline y \vee \overline x \vee z) = $
+            $\overline x \vee \overline y \vee z \rightarrow (\overline x \vee x) \wedge (\overline x \vee \overline y) \vee z = $\\
+            $\overline x \vee \overline y \vee z \rightarrow \overline x \vee \overline y \vee z = 1$ - ч. т. д.
+        \end{spacing}
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№4 Доказать тождественную ложность следующих формул:}
+    \end{center}
+
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $x \vee \overline x \rightarrow y \wedge \overline y = 1 \rightarrow 0 = 0$ - ч. т. д.
+
+            \item $x \wedge (x \rightarrow y) \wedge (x \rightarrow \overline y) = $
+            $x \wedge (\overline x \vee y) \wedge (\overline x \vee \overline y) = $
+            $x \wedge y \wedge (\overline x \vee \overline y) = 0$ - ч. т. д.
+
+            \item $\overline{x \wedge \overline x \rightarrow y} \rightarrow z \rightarrow w \wedge \overline w = $
+            $0 \rightarrow z \rightarrow 0 = 1 \vee z \rightarrow 0 = 1 \rightarrow 0 = 0$ - ч. т. д.
+
+            \item $\overline{x \rightarrow y \rightarrow (x \wedge z \rightarrow y \wedge z)} = $
+            $\overline{\overline x \vee y \rightarrow (\overline x \vee \overline z \vee y \wedge z)} = $\\
+            $\overline{\overline x \vee y \rightarrow (\overline z \vee z) \wedge (\overline z \vee y) \vee \overline x} = $
+            $\overline{\overline x \vee y \rightarrow \overline z \vee y \vee \overline x} = $\\
+            $\overline{x \wedge \overline y \vee \overline z \vee y \vee \overline x} = $
+            $\overline{\overline x \vee \overline y \vee \overline z \vee y} = \overline 1 = 0$ - ч. т. д.
+
+            \item $x \wedge y \wedge z \wedge (x \vee y \vee z \rightarrow \overline w) \wedge w = $
+            $x \wedge y \wedge z \wedge (\overline x \wedge \overline y \wedge \overline z \vee \overline w) \wedge w = $\\
+            $x \wedge y \wedge z \wedge w \wedge (\overline x \wedge \overline y \wedge \overline z \vee \overline w) = 0$ - ч. т. д.
+
+            \item $\overline{(x \vee y) \wedge (z \vee x)} \wedge x = (\overline{x \vee y} \vee \overline{z \vee x}) \wedge x = $
+            $(\overline x \wedge \overline y \vee \overline z \wedge \overline x) \wedge x = 0$ - ч. т. д.
+
+        \end{spacing}
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№5 Найти $\textbf{z}$, если:}
+        \begin{enumerate}
+            \begin{spacing}{1.5}
+                \item $\overline{\overline x \vee z} \vee \overline{x \vee z} = y$\\
+                $x \wedge \overline z \vee \overilne x \wedge \overline z = y$\\
+                $\overline z = y$\\
+                $z = \overline y$\\
+                Ответ: $z = \overline y$
+
+                \item $x \wedge y \wedge (\overline x \vee \overline y) \vee z = y$\\
+                $z = y$\\
+                Ответ: $z = y$
+
+                \item $z \wedge (x \wedge y \vee \overline{x \wedge y}) \vee \overline{(a \vee a)} \wedge (d \wedge q \wedge \overline{d \wedge q}) = zxc$\\
+                $z \vee \overline a \wedge 0 = zxc$\\
+                $z = zxc$\\
+                $z = 0$\\
+                Ответ: $z = 0$
+
+                \item $(x \vee y \vee z) \wedge \overline{\overline{(\overline x \wedge \overline y \wedge \overline z)}} \vee z \wedge (x \wedge w \vee \overline x \vee \overline w) = \overline{x \wedge y} \vee \overline x \wedge x$\\
+                $(x \vee y \vee z) \wedge \overline{(x \vee y \vee z)} \vee z \wedge (\overline x \vee w \vee \overline w) = \overline{x \wedge y}$\\
+                $z = \overline {x \wedge y}$\\
+                $z = \overline x \vee \overline y$\\
+                Ответ: $z = \overline x \vee \overline y$
+            \end{spacing}
+        \end{enumerate}
+    \end{center}
+
+
+    \begin{center}
+        \textbf{№6 Выразить через импликацию следующие формулы:}
+    \end{center}
+    \begin{enumerate}
+        \begin{spacing}{1.5}
+            \item $\overline x \vee y = x \rightarrow y$
+
+            \item $\overline{\overline x \vee y} \vee x = x \rightarrow y \rightarrow x$
+
+            \item $\overline{(\overline x \vee y)} \vee (\overline y \vee x) = x \rightarrow y \rightarrow (y \rightarrow x)$
+
+            \item $\overline{(\overline x \vee y)} \vee (\overline x \vee y) = x \rightarrow y \rightarrow (x \rightarrow y)$
+
+            \item $\overline{\overline{\overline x \vee y} \vee (\overline y \vee x)} \vee x = x \rightarrow y \rightarrow (y \rightarrow x) \rightarrow x$
+        \end{spacing}
+    \end{enumerate}
 
 
 \end{document}

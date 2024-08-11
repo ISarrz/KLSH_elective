@@ -1,15 +1,365 @@
-%! Author = zero
-%! Date = 30/07/2024
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 29/07/2024
 
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
+\input{preamble}
 
 % Document
 \begin{document}
+    \begin{center}
+        \textbf{Задачи №4 Функции}\\
+    \end{center}
+
+    \begin{center}
+        \textbf{№1 Построить выражение с одной операцией по следующим таблицам истинности:}
+    \end{center}
+
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{0}
+            \begin{spacing}{0.5}
+                \item $\overline x$\\
+            \end{spacing}
+            \setcounter{enumi}{4}
+            \begin{spacing}{0.5}
+                \item $x \mid y$\\
+            \end{spacing}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{1}
+            \begin{spacing}{0.5}
+                \item $x \vee y$\\
+            \end{spacing}
+            \setcounter{enumi}{5}
+            \begin{spacing}{0.5}
+                \item $x \downarrow y$\\
+            \end{spacing}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \begin{spacing}{0.5}
+                \item $x \wedge y$\\
+            \end{spacing}
+            \setcounter{enumi}{6}
+            \begin{spacing}{0.5}
+                \item $x \rightarrow y$\\
+            \end{spacing}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \begin{spacing}{0.5}
+                \item $x \oplus y$\\
+            \end{spacing}
+            \setcounter{enumi}{7}
+            \begin{spacing}{0.5}
+                \item $x \leftrightarrow y$\\
+            \end{spacing}
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№2 С помощью таблицы истинности упростить следующие формулы:}
+    \end{center}
+
+    \begin{minipage}[t]{0.29\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{0}
+            \begin{spacing}{0.5}
+                \item $x \wedge (y \vee \overline y)$\\
+            \end{spacing}
+            \begin{tabular}{|x|y|f|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 0            \\
+                \hline
+                0            & 1            & 0            \\
+                \hline
+                1            & 0            & 1            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ: $x$
+            \begin{spacing}{1.52}
+                \begin{center}\end{center}
+            \end{spacing}
+            \setcounter{enumi}{4}
+            \begin{spacing}{0.5}
+                \item $x \rightarrow y \rightarrow x \rightarrow y$\\
+            \end{spacing}
+            \begin{tabular}{|x|y|f|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 1            \\
+                \hline
+                0            & 1            & 1            \\
+                \hline
+                1            & 0            & 0            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ:\\
+            СКНФ\\
+            $\overline x \vee y$\\
+            СДНФ\\
+            $\overline x \wedge \overline y \vee \overline x \wedge y \vee x \wedge y = $
+            $\overline x \vee x \wedge y = $
+            $\overline x \vee y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.24\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{1}
+            \begin{spacing}{0.5}
+                \item $x \oplus y$\\
+            \end{spacing}
+            \begin{tabular}{|x|y|f|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 0            \\
+                \hline
+                0            & 1            & 1            \\
+                \hline
+                1            & 0            & 1            \\
+                \hline
+                1            & 1            & 0            \\
+                \hline
+            \end{tabular}
+            Ответ: \\
+            СДНФ\\
+            $\overline x \wedge y \vee x \wedge \overline y$\\
+            СКНФ\\
+            $(x \vee y) \wedge (\overline x \vee y)$
+            \begin{spacing}{1}
+            \end{spacing}
+            \setcounter{enumi}{5}
+            \begin{spacing}{0.5}
+                \item $y \wedge (x \vee \overline y)$\\
+            \end{spacing}
+            \begin{tabular}{|x|c|c|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 0            \\
+                \hline
+                0            & 1            & 0            \\
+                \hline
+                1            & 0            & 0            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ:\\
+            $x \wedge y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.31\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \begin{spacing}{0.5}
+                \item $x \wedge (x \downarrow y)$\\
+            \end{spacing}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 0            \\
+                \hline
+                0            & 1            & 0            \\
+                \hline
+                1            & 0            & 0            \\
+                \hline
+                1            & 1            & 0            \\
+                \hline
+            \end{tabular}\\
+            Ответ: 0
+            \begin{spacing}{1.52}
+                \begin{center}\end{center}
+            \end{spacing}
+            \setcounter{enumi}{6}
+            \begin{spacing}{0.5}
+                \item $(x \rightarrow y) \leftrightarrow (y \rightarrow x)$\\
+            \end{spacing}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 1            \\
+                \hline
+                0            & 1            & 0            \\
+                \hline
+                1            & 0            & 0            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ:\\
+            $x \leftrightarrow y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.3\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \begin{spacing}{0.5}
+                \item $x \vee \overline x \wedge y$\\
+            \end{spacing}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 0            \\
+                \hline
+                0            & 1            & 1            \\
+                \hline
+                1            & 0            & 1            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ:\\
+            СКНФ\\
+            $x \vee y$\\
+            СДНФ\\
+            $\overline x \wedge y \vee x \wedge \overline y \vee x \wedge y = $
+            $\overline x \wedge y \vee x = $
+            $x \vee y$
+            \setcounter{enumi}{7}
+            \begin{spacing}{0.5}
+                \item $(x \oplus y) \mid (x \downarrow y)$\\
+            \end{spacing}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                \hline
+                \hline
+                0            & 0            & 1            \\
+                \hline
+                0            & 1            & 1            \\
+                \hline
+                1            & 0            & 1            \\
+                \hline
+                1            & 1            & 1            \\
+                \hline
+            \end{tabular}\\
+            Ответ: 1
+        \end{enumerate}
+    \end{minipage}
 
 
+    \begin{center}
+        \textbf{№3 Построить и упростиить СКНФ и СДНФ функции $\textbf{f}$ по следующим таблицам истинности:}
+    \end{center}
+
+    \begin{spacing}{1.5}
+        \begin{enumerate}
+            \begin{spacing}{1.5}
+                \item СКНФ\\
+                $(x \vee \overline y) \wedge (\overline x \vee \overline y) = $
+                $x \wedge \overline x \vee x \wedge \overline y \vee \overline x \wedge \overline y \vee y \wedge \overline y = $
+                $x \wedge \overline y \vee \overline y \vee \overline x \wedge \overline y = $
+                $\overline y$\\
+                СДНФ\\
+                $\overline x \wedge \overline y \vee x \wedge \overline y = $
+                $\overline y \wedge (\overline x \vee x) = $
+                $\overline y$
+
+                \item СКНФ\\
+                $\overline x \vee y$\\
+                СДНФ\\
+                $\overline x \wedge \overline y \vee \overline x \wedge y \vee x \wedge y = $
+                $\overline x \vee x \wedge y = $
+                $\overline x \vee y$
+
+                \item СКНФ\\
+                $(x \vee y) \wedge (\overline x \vee y) \wedge (\overline x \vee \overline y) = $
+                $(x \wedge y \vee \overline x \wedge y \vee y) \wedge (\overline x \vee \overline y) = $
+                $\overline x \wedge y$\\
+                СДНФ\\
+                $\overline x \wedge y$
+
+                \item СКНФ\\
+                $(x \vee y) \wedge (x \vee \overline y) = $
+                $x \vee x \wedge \overline y \vee x \wedge y = x$\\
+                СДНФ\\
+                $x \wedge \overline y \vee x \wedge y = x$
+
+                \item СКНФ\\
+                $(x \vee \bar y \vee z) \wedge (x \vee \bar y \vee \bar z) \wedge (\bar x \vee \bar y \vee z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee x \wedge \bar y \vee x \wedge \bar z \vee \bar y \vee \bar y \wedge \bar z \vee x \wedge z \vee \bar y \wedge z) \wedge (\bar x \vee \bar y \vee z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee \bar y) \wedge (\bar x \vee \bar x \wedge \bar y \vee \bar x \wedge \bar z \vee \bar y \vee \bar y \wedge \bar z \vee \bar x \wedge z \vee \bar y \wedge z) = $\\
+                $(x \vee \bar y) \wedge (\bar x \vee \bar y) = $
+                $\bar y \vee x \wedge \bar x = \bar y$\\
+                СДНФ\\
+                $\bar x \wedge \bar y \wedge \bar z \vee \bar x \wedge \bar y \wedge z \vee x \wedge \bar y \wedge \bar z \vee x \wedge \bar y \wedge z = $\\
+                $\bar x \wedge \bar y \wedge (\bar z \vee \bar z) \vee x \wedge \bar y \wedge (\bar z \vee z) = $
+                $\bar x \wedge \bar y \vee x \wedge \bar y = $\\
+                $\bar y \wedge (\bar x \vee x) = \bar y$
+
+                \item СКНФ\\
+                $(x \vee y \vee \bar z) \wedge (x \vee \bar y \vee \bar z) \wedge (\bar x \vee y \vee \bat z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee x \wedge \bar y \vee x \wedge \bar z \vee x \wedge y \vee x \wedge \bar z \vee \bar y \wedge \bar z \vee \bar z) \wedge (\bar x \vee y \vee \bar z) = $\\
+                $(x \vee \bar z) \wedge (\bar x \vee \bar x \wedge \bar y \vee \bar x \wedge \bar z \vee \bar x \wedge y \vee y \wedge \bar z \vee \bar x \wedge \bar z \vee \bar y \wedge \bar z \vee \bar z) = $\\
+                $(x \vee \bar z) \wedge (\bar x \vee \bar z) = $
+                $\bar z \vee x \wedge \bar x = \bar z$\\
+                СДНФ\\
+                $\bar x \wedge \bar y \wedge \bar z \vee \bar x \wedge y \wedge \bar z \vee x \wedge \bar y \wedge \bar z \vee x \wedge y \wedge \bar z = $\\
+                $\bar x \wedge \bar y \wedge \bar z \vee x \wedge \bar y \wedge \bar z \vee \bar x \wedge y \wedge \bar z \vee x \wedge y \wedge \bar z = $\\
+                $\bar y \wedge \bar z \wedge (\bar x \vee x) \vee y \wedge \bar z \wedge (\bar x \vee x) = $\\
+                $\bar y \wedge \bar z \vee y \wedge \bar z = \bar z$
+
+                \item СКНФ\\
+                $(x \vee y \vee z) \wedge (x \vee y \vee \bar z) \wedge (x \vee \bar y \vee z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee x \wedge y \vee x \wedge \bar z \vee y \vee y \wedge \bar z \vee x \wedge z \vee y \wedge z) \wedge (x \vee \bar y \vee z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee y) \wedge (x \wedge \bar y \vee x \wedge \bar z \vee \bar x \wedge \bar y \vee \bar y \vee \bar y \wedge \bar z \vee \bar x \wedge z \vee \bar y \wedge z) = $\\
+                $(x \vee y) \wedge (x \wedge \bar z \vee \bar y \vee \bar x \wedge z) = $\\
+                $x \wedge \bar z \vee x \wedge \bar y \vee x \wedge y \wedge \bar z \vee \bar x \wedge y \wedge z = $\\
+                $x \wedge \bar z \vee x \wedge (\bar y \vee y \wedge \bar z) = \bar x \wedge y \wedge z = $\\
+                $x \wedge \bar z \vee x \wedge (\bar y \vee y) \wedge (\bar y \vee \bar z) \vee \bar x \wedge y \wedge z = $\\
+                $x \wedge \bar z \vee x \wedge \bar y \vee \bar x \wedge y \wedge z$\\
+                СДНФ\\
+                $\bar x \wedge y \wedge z \vee x \wedge \bar y \wedge \bar z \vee x \wedge \bar y \wedge z \vee x \wedge y \wedge \bar z = $\\
+                $x \wedge \bar y \wedge \bar z \vee x \wedge \bar y \wedge z \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $\\
+                $x \wedge \bar y \wegde (\bar z \vee z) \vee \bar x \wedge y \wedge z \vee x \wedge y \vee \bar z = $\\
+                $x \wedge \bar y \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $\\
+                $x \wedge (\bar y \vee y \wedge \bar z) \vee \bar x \wedge y \wedge z = $\\
+                $x \wedge (\bar y \vee y) \wedge (\bar y \vee \bar z) \vee \bar x \wedge y \wedge z = $\\
+                $x \wedge \bar y \vee x \wedge \bar z \vee \bar x \wedge y \wedge z$
+
+                \item СКНФ\\
+                $(x \vee y \vee z) \wedge (x \vee y \vee \bar z) \wedge (\bar x \vee y \vee z) \wedge (\bar x \vee y \vee \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee x \wedge y \vee x \wedge \bar z \vee y \vee y \wedge \bar z \vee x \wedge z \vee y \wedge z) \wedge (\bar x \vee y \vee z) \wedge (\bar x \vee y \vee \bar z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee y) \wedge (\bar x \vee \bar x \wedge y \vee \bar x \wedge \bar z \vee y \vee y \wedge \bar z \vee \bar x \wedge z \vee y \wedge z) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $(x \vee y) \wedge (\bar x \vee y) \wedge (\bar x \vee \bar y \vee \bar z) = $
+                $(y \vee x \wedge \bar x) \wedge (\bar x \vee \bar y \vee \bar z) = $\\
+                $y \wedge (\bar x \vee \bar y \vee \bar z) = $
+                $\bar x \wedge y \vee y \wedge \bar z$\\
+                СДНФ\\
+                $\bar x \wedge y \wedge \bar z \vee \bar x \wedge y \wedge z \vee x \wedge y \wedge \bar z = $
+                $\bar x \wedge y \wedge \bar z \vee x \wedge y \wedge \bar z \vee \bar x \wedge y \wedge z = $\\
+                $y \wedge \bar z \wedge (\bar x \vee x) \vee \bar x \wedge y \wedge z = $
+                $y \wedge \bar z \vee \bar x \wedge y \wedge z = $
+                $y \wedge (\bar z \vee \bar x \wedge z) = $\\
+                $y \wedge (\bar z \vee \bar x) \wedge (\bar z \vee z) = $
+                $y \wedge \bar z \vee \bar x \wedge y$
+
+            \end{spacing}
+        \end{enumerate}
+    \end{spacing}
 
 \end{document}

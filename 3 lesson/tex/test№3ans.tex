@@ -1,0 +1,50 @@
+%! Author = zero
+%! Date = 29/07/2024
+
+% Preamble
+\input{preamble}
+
+% Document
+\begin{document}
+    \begin{center}
+        \textbf{
+            Самостоятельная работа №3\\Логические аксиомы, свойства логических операций
+        }
+
+        \textbf{№1 Написать формулы}
+    \end{center}
+
+    \begin{enumerate}
+        \item $x = x \wedge x$
+        \item $x = x \vee x$
+        \item $x = \overline {\overline x}$
+        \item $x = x \wedge 1$
+        \item $x = x \vee 0$
+        \item $1 = x \vee 1$
+        \item $1 = x \wedge \bar x$
+        \item $0 = x \wedge 0$
+        \item $0 = x \wedge \bar x$
+    \end{enumerate}
+
+    \begin{center}
+        \textbf{№2 Упростить}
+    \end{center}
+
+    \begin{enumerate}
+        \item $\overline{x \wedge y} \vee x = \bar x \vee \bar y \vee x = 1$
+
+        \item $x \wedge (x \vee y) \vee \overline x = x \vee x \wedge y \vee \bar x = 1$
+        \item $(x \vee (y \wedge z))\wedge \overline{x \vee y}) = $
+        $(x \wedge y \vee x \wedge z) \wedge \overline{x \vee y} = $
+        $x \wedge z \wedge (\bar x \wedge \bar y) = 0$
+        \item $\overline{(\overline x \vee \overline y)} \wedge \overline x = x \wedge y \wedge \bar x = 0$
+        \item $x \wedge (x \vee y) \wedge \overline{x \vee (x \wedge y)} = x \wedge (x \vee y) \wedge \bar x \wedge \overline{x \wedge y} = 0$
+        \item $\overline{((x \wedge y) \vee (x \wedge z)) \wedge (\overline y \wedge \ooverline z)} = $
+        \begin{spacing}{1.2}
+            $\overline{(x \vee x \wedge z \vee x \wedge y \vee y \wedge z) \wedge (\bar y \wedge z)} = $
+            $\overline{(x \vee y \wedge z) \wedge (\bar y \wedge z)} = $\\
+            $\overline{x \wedge \bar y \wedge z} = $
+            $\bar x \vee y \vee \bar z$
+        \end{spacing}
+    \end{enumerate}
+\end{document}

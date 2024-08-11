@@ -1,15 +1,355 @@
-%! Author = zero
-%! Date = 30/07/2024
+\usepackage{stmaryrd}%! Author = zero
+%! Date = 29/07/2024
 
-% Preamble
-\documentclass[11pt]{article}
-
-% Packages
-\usepackage{amsmath}
+\input{preamble}
 
 % Document
 \begin{document}
+    \begin{center}
+        \textbf{Задачи №4 КНФ, ДНФ, СКНФ, СДНФ}\\
+    \end{center}
 
+    \begin{center}
+        \textbf{№1 Построить выражение с одной операцией по следующим таблицам истинности:}
+    \end{center}
+
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{0}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+            \setcounter{enumi}{4}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+
+            \end{tabular}
+
+            \setcounter{enumi}{5}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+
+            \end{tabular}
+            \setcounter{enumi}{6}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+
+            \setcounter{enumi}{7}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+
+
+    \begin{center}
+        \textbf{№2 С помощью таблицы истинности упростить следующие формулы:}
+    \end{center}
+
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{0}
+            \item $x \wedge (y \vee \overline y)$
+            \item $x \oplus y$
+            \item $x \wedge (x \downarrow y)$
+            \item $x \vee \overline x \wedge y$
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.4\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{4}
+            \item $x \rightarrow y \rightarrow x \rightarrow y$
+            \item $y \wedge (x \vee \overline y)$
+            \item $(x \rightarrow y) \leftrightarrow (y \rightarrow x)$
+            \item $(x \oplus y) \mid (x \downarrow y)$
+        \end{enumerate}
+    \end{minipage}
+
+    \begin{center}
+        \textbf{№3 Построить и упростиить СКНФ и СДНФ функции $\textbf{f}$ по следующим таблицам истинности:}
+    \end{center}
+
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{0}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+            \setcounter{enumi}{4}
+            \item \begin{tabular}{|x|y|z|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{z}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            & 1            \\
+                      \hline
+                      0            & 0            & 1            & 1            \\
+                      \hline
+                      0            & 1            & 0            & 0           \\
+                      \hline
+                      0            & 1            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 0            & 1            \\
+                      \hline
+                      1            & 0            & 1            & 1            \\
+                      \hline
+                      1            & 1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{1}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+            \end{tabular}
+            \setcounter{enumi}{5}
+            \item \begin{tabular}{|x|y|z|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{z}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            & 1            \\
+                      \hline
+                      0            & 0            & 1            & 0            \\
+                      \hline
+                      0            & 1            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 0            & 1            \\
+                      \hline
+                      1            & 0            & 1            & 0            \\
+                      \hline
+                      1            & 1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{2}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            \\
+                      \hline
+                      1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+            \setcounter{enumi}{6}
+            \item \begin{tabular}{|x|y|z|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{z}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            & 0            \\
+                      \hline
+                      0            & 0            & 1            & 0            \\
+                      \hline
+                      0            & 1            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            & 1            \\
+                      \hline
+                      1            & 0            & 1            & 1            \\
+                      \hline
+                      1            & 1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
+    \begin{minipage}[t]{0.25\textwidth}
+        \begin{enumerate}
+            \setcounter{enumi}{3}
+            \item \begin{tabular}{|x|y|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            \\
+                      \hline
+                      0            & 1            & 0            \\
+                      \hline
+                      1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 1            \\
+                      \hline
+            \end{tabular}
+            \setcounter{enumi}{7}
+            \item \begin{tabular}{|x|y|z|f|}
+                      \hline
+                      $\textbf{x}$ & $\textbf{y}$ & $\textbf{z}$ & $\textbf{f}$ \\
+                      \hline
+                      \hline
+                      0            & 0            & 0            & 0            \\
+                      \hline
+                      0            & 0            & 1            & 0            \\
+                      \hline
+                      0            & 1            & 0            & 1            \\
+                      \hline
+                      0            & 1            & 1            & 1            \\
+                      \hline
+                      1            & 0            & 0            & 0            \\
+                      \hline
+                      1            & 0            & 1            & 0            \\
+                      \hline
+                      1            & 1            & 0            & 1            \\
+                      \hline
+                      1            & 1            & 1            & 0            \\
+                      \hline
+            \end{tabular}
+        \end{enumerate}
+    \end{minipage}
 
 
 \end{document}
